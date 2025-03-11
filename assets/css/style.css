@@ -1,0 +1,47 @@
+body {
+    background: rgba(0, 0, 0, 0.856);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+}
+.retour {
+    background: red;
+    border-radius: 20%;
+    color: white;
+    padding: 0.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+label {
+    text-align: center;
+}
+
+#valider {
+    background: green;
+    border-radius: 20%;
+    padding: 0.5rem;
+    color: white;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+span {
+    color: red;
+}

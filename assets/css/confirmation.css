@@ -1,0 +1,26 @@
+body {
+    background: rgba(0, 0, 0, 0.856);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: blue;
+}
+
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-out.hidden {
+    opacity: 0;
+}
