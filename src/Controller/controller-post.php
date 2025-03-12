@@ -25,7 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     
     $target_dir = "../../assets/img/users/" . $_SESSION['user_id'] . "/";
-    $target_file = $target_dir . uniqid() . "_" . basename($_FILES["dossier"]["name"]);
+    $newName = uniqid() . "_" . basename($_FILES["dossier"]["name"]);
+    $target_file = $target_dir . $newName;
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -96,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     
     
-        $stmt->bindValue(":pic_name", $_FILES["dossier"]["name"], PDO::PARAM_STR);
+        $stmt->bindValue(":pic_name", $newName, PDO::PARAM_STR);
         $stmt->bindValue(":post_id", $id, PDO::PARAM_STR);
       
         // $stmt->execute();
