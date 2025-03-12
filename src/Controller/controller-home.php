@@ -29,32 +29,46 @@ $allPosts = $stmt->fetchAll();
 $image = "";
 $i = 0;
 
+// $sql = "SELECT count(*) from 76_likes where post_id = :post_id";
+//     $stmt = $pdo->prepare($sql);
+//     $stmt->bindValue(':post_id', $_SESSION['post_id'], PDO::PARAM_STR);
+//     $stmt->execute();
+//     $nbLikes = $stmt->fetch(PDO::FETCH_ASSOC);
+//     $nbLikes = $nbLikes['count(*)'];  
+    
+//     $sql = "SELECT count(*) from 76_comments where post_id = :post_id";
+//     $stmt = $pdo->prepare($sql);
+//     $stmt->bindValue(':post_id', $_POST['post_id'], PDO::PARAM_STR);
+//     $stmt->execute();
+//     $nbComments = $stmt->fetch(PDO::FETCH_ASSOC);
+//     $nbComments = $nbComments['count(*)'];
+
+
 foreach ($allPosts as $value) {
     $image .= "<div class='container'>
                 <div class='title'>
                     <img src='/LogoChaine.png' alt='profil'>
-                    <h1> " . $value['user_pseudo'] . "</h1>
+                    <h1><a href='controller-other-profil.php?user=" . $value['user_id'] . " '> " . $value['user_pseudo'] . "</a></h1>
                     <p> " . date('d/m/Y H:i', $value['post_timestamp']) . "</p>
                 </div>
                 <div class='public'>
+                <a href='../Controller/controller-openpost.php?post=" . $value['post_id'] ."'>
                     <img src='../../assets/img/users/" . $value['user_id'] . "/" . $value['pic_name'] . "' alt=''>
+                    </a>
                 </div>
                 <div class='icon'>
                 <p><i class='fa-regular fa-heart'></i></p>
                 <p><i class='fa-regular fa-comment'></i></p>
                 </div>
-                <div class='like'>
-                    <p>Nombre de like</p>
-                </div>
                 <div class='commentaire'>
-                <p> " . $value['user_pseudo'] . " : " . $value['post_description'] . " </p>
+                <p><span> " . $value['user_pseudo'] . " </span>: " . $value['post_description'] . " </p>
                 </div>
-                <div class='moreInfos'>
-                    <a href=''>Afficher tout les commentaires</a>
-                </div>
-                <input type='text' placeholder=' Ajouter un commentaire'>
+            
             </div>";
 }
+
+
+
 
 $pdo = '';
 

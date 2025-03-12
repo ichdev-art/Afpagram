@@ -30,10 +30,12 @@
         </div>
         <div class='moreInfos'>
             <p><?= $commentaire ?></p>
-            <form action='' method="post" novalidate>
-                <input type='text' placeholder=' Ajouter un commentaire'>
-                <button>Envoyer</button>
+            <div>
+            <form  class="addcom" action='' method="post" novalidate>
+                <input type='text' name="com_text" placeholder=' Ajouter un commentaire'>
             </form>
+            <p class="error"><?= $error["com_text"] ?? '' ?></p>
+        </div>
         </div>
     </div>
 

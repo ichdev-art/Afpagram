@@ -68,13 +68,17 @@ input {
 
 .commentaire {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     width: 100%;
+}
+
+.commentaire span {
+    font-weight: bold;
 }
 
 a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.719);
+    color: rgb(255, 255, 255);
 }
 
 .icon {

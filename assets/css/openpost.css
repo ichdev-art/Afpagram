@@ -73,6 +73,7 @@ input {
     height: 100vh;
     width: 20%;
     padding: 1rem;
+    overflow:hidden;
 }
 
 .moreInfos button {
@@ -146,7 +147,7 @@ button:hover p {
 }
 
 button:hover {
-    background-color: white;
+    background-color: rgba(15, 1, 1, 0.651);
 }
 
 .title img {
@@ -155,6 +156,11 @@ button:hover {
     margin: 1rem;
     background-image: linear-gradient(to left bottom, #833ab4, #d03097, #f94c72, #ff7d53, #fcb045);
     padding: 0.2rem;
+}
+
+.error {
+    color: red;
+    text-align: center; 
 }
 
 
