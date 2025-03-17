@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Narrow&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sue+Ellen+Francisco&display=swap');
+
+
 body {
     background: rgba(0, 0, 0, 0.856);
     color: white;
@@ -19,6 +22,13 @@ ul {
     gap: 2rem;
     padding: 1rem;
 }
+
+.menuleft h1 {
+    font-family: "Sue ellen francisco", sans-serif;
+    font-weight: normal;
+    font-size: 3rem;
+}
+
 
 .menuleft ul li button {
     padding-left: 2rem;
@@ -49,7 +59,7 @@ li {
 }
 
 .menuright {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 

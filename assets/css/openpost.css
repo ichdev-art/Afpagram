@@ -19,6 +19,16 @@ ul {
     padding: 1rem;
 }
 
+.iconCoeur {
+    color: red;
+}
+
+.menuleft h1 {
+    font-family: "Sue ellen francisco", sans-serif;
+    font-weight: normal;
+    font-size: 3rem;
+}
+
 .menuleft ul li button {
     padding-left: 2rem;
     padding-right: 2rem;

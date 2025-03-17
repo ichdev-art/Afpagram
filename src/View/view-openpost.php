@@ -21,7 +21,7 @@
                 <img src="../../assets/img/users/<?= $uniquePost['user_id'] ?>/<?= $uniquePost['pic_name'] ?>" alt=''>
             </div>
             <div class='icon'>
-                <p><?= $nbLikes ?> <i class='fa-regular fa-heart'></i></p>
+                <p><?= $nbLikes ?> <?= toutlesLikes($uniquePost['post_id'], $pdo) ? " <i class='fa-solid fa-heart iconCoeur'></i>" : " <i class='fa-regular fa-heart'></i></p>" ?>
                 <p><?= $nbComments ?> <i class='fa-regular fa-comment'></i></p>
             </div>
         </div>
